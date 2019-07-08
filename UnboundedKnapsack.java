@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 //Given an array of integers and a target sum, determine the sum nearest to but not exceeding the target that can be created. 
 //To create the sum, use any element of your array zero or more times.
-public class Test2Programming {
+public class UnboundedKnapsack {
 
 	private static final Scanner scanner = new Scanner(System.in);
 
