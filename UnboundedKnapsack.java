@@ -10,12 +10,12 @@ public class UnboundedKnapsack {
 	/**
 	 * Method to find the max value
 	 * 
-	 * @param int first
-	 * @param int second
+	 * @param int value1
+	 * @param int value2
 	 * @return
 	 */
-	private static int max(int first, int second) {
-		return (first > second) ? first : second;
+	private static int max(int value1, int value2) {
+		return (value1 > value2) ? value1 : value2;
 	}
 
 	/**
@@ -26,8 +26,13 @@ public class UnboundedKnapsack {
 	 * @param int[] arr
 	 * @return
 	 */
-	static int unboundedKnapsack(int k, int[] arr) {
+	private static int unboundedKnapsack(int k, int[] arr) {
 
+		// base checks
+		if (k <= 0 || arr.length == 0) {
+		 return 0;		
+		}
+		
 		// Array Length
 		int n = arr.length;
 
@@ -35,7 +40,6 @@ public class UnboundedKnapsack {
 		// with knapsack capacity
 		int newArr[] = new int[k + 1];
 
-		// Using recursive formula
 		for (int i = 0; i <= k; i++) {
 			for (int j = 0; j < n; j++) {
 
@@ -88,7 +92,7 @@ public class UnboundedKnapsack {
 
 					// Calling unboundedKnapsack method
 					int result = unboundedKnapsack(k, arr);
-					
+
 					// Printing the result
 					System.out.println(result);
 				} else {
